@@ -17,4 +17,10 @@ int main()
     std::cout << "\nString: ";
     std::cin >> e;
     std::cout << "Your string was " << e << std::endl;
+
+    // This allows multiple words as input
+    std::string f;
+    std::cout << "\n\nWords: ";
+    std::getline(std::cin, f);
+    std::cout << "Your words were " << f << std::endl;
 }
