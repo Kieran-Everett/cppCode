@@ -11,4 +11,10 @@ int main()
     std::cout << e << std::endl;
 
     //                  i   dont think i    want ot do   C++ any more
+
+
+    // This only works for when you have a single word
+    std::cout << "\nString: ";
+    std::cin >> e;
+    std::cout << "Your string was " << e << std::endl;
 }
