@@ -18,6 +18,11 @@ int main()
     std::cin >> e;
     std::cout << "Your string was " << e << std::endl;
 
+    // trying to fix input buffer
+    std::cin.clear();
+    //std::cin.ignore(100, '\n'); // Hardcodes the size which works but not for larger amounts of text
+    std::cin.ignore(sizeof(e), '\n'); // Change the "e" variable to be whatever the last cin variable was and it will clear the buffer to that size
+
     // This allows multiple words as input
     std::string f;
     std::cout << "\n\nWords: ";
