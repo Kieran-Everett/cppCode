@@ -37,8 +37,17 @@ class Shape
         int height;
 };
 
+class PaintCost
+{
+    public:
+        int getCost(int area)
+        {
+            return area * 70;
+        }
+};
+
 // Derived Class
-class Rectangle : public Shape
+class Rectangle : public Shape, public PaintCost
 {
     public:
         int getArea()
@@ -82,7 +91,10 @@ int main()
     Rect.setWidth(5);
     Rect.setHeight(3);
 
+    int area = Rect.getArea();
+
     std::cout << "Area of Rect: " << Rect.getArea() << std::endl;
+    std::cout << "Cost of paint: " << Rect.getCost(area) << std::endl;
 
     return 0;
 }
