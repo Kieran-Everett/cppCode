@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="07-Classes.cpp" />
+    <ClCompile Include="07-ExternTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
