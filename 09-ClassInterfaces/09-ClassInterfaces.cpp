@@ -1,20 +1,38 @@
-// 09-ClassInterfaces.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+
+class Shape {
+public:
+    // A virtual function providing an interface with 'higher level' classes
+    virtual int getArea() = 0;
+    void setWidth(int w) {
+        width = w;
+    }
+    void setHeight(int h) {
+        height = h;
+    }
+protected:
+    int width;
+    int height;
+};
+
+// Derriving from Shape
+class Rectangle : public Shape {
+public:
+    // This method is called through the virtual function in the inherrited Shape class
+    int getArea() {
+        return (width * height);
+    }
+};
+
+class Triangle : public Shape {
+public:
+    // This method is also called through the virtual function
+    int getArea() {
+        return (width * height) / 2;
+    }
+};
 
 int main()
 {
     std::cout << "Hello World!\n";
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
