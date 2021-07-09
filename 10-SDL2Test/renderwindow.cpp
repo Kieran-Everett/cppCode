@@ -13,3 +13,7 @@ RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h) : window(NULL)
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 }
+
+void RenderWindow::cleanUp() {
+	SDL_DestroyWindow(window);
+}
