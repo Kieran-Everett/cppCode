@@ -34,5 +34,19 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Rectangle Rect;
+    Triangle Tri;
+
+    Rect.setWidth(5);
+    Rect.setHeight(2);
+
+    std::cout << "total rectangle area: " << Rect.getArea() << std::endl;
+
+    // uuh these are bad numbers to use as examples but it works soooo.... (area is 10.5 but uses an int as the data type)
+    Tri.setWidth(3);
+    Tri.setHeight(7);
+
+    std::cout << "total triangle area: " << Tri.getArea() << std::endl;
+
+    return 0;
 }
