@@ -17,5 +17,20 @@ int main(int argc, char* argv[]) {
 
 	RenderWindow window("GAME v1.0", 1280, 720);
 
+	bool gameRunning = true;
+
+	SDL_Event event;
+
+	while (gameRunning) {
+		while (SDL_PollEvent(&event)) {
+			if (event.type == SDL_QUIT) {
+				gameRunning = false;
+			}
+		}
+	}
+
+	window.cleanUp();
+	SDL_Quit();
+
 	return 0;
 }
